@@ -1,0 +1,3 @@
+in any folder run this command to create package file
+
+npm init
