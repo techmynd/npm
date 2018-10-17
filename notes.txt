@@ -30,3 +30,26 @@ create entry point file
 > touch index.js
 
 echo 'hello' >> index.js
+
+run index.js
+
+> node index.js
+
+if you dont see anything type in index.js some js code like console.log anything and then run
+
+> node index.js
+
+=====================
+
+how node accesses a file
+
+const c = require('./hello.js');
+
+./ is required for same folder path
+./hello.js assumes that hello.js is in same folder
+
+=====================
+
+index.js and package.json setup
+complete-json-ajax-course
+> section 11 > lessons 167, 168, 169, 170, 171
