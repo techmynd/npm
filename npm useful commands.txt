@@ -1,0 +1,131 @@
+npm useful commands
+===================
+
+npm install --save-dev style-loader css-loader
+npm install --save-dev file-loader
+
+Fix vulnerabilities and update packages
+> npm audit fix
+Audit report in JSON format
+> npm audit
+
+Create package.json file
+> npm init
+
+install packages
+> npm install 
+> npm i
+
+install depending on dev or production
+> npm install <package_name> --save-prod
+> npm install <package_name> --save-dev
+> npm install <package_name> -g
+
+remove all packages
+> npm prune 
+
+update all packages
+> npm update
+
+npm default scripts
+"start": "node server.js"
+"test": "npm run index.js"
+
+npm port config
+, "config" : { "port" : "8080" }
+
+run one of npm script
+> npm run <script name>
+
+Clean npm cache
+> npm cache clean --force
+
+Remove node_modules
+> rm -rf node_modules/
+
+
+Flags
+-----
+> npm -v
+> sass -v
+
+> create index.js
+> touch index.js
+
+run index.js
+
+
+> npm install --save-dev webpack webpack-cli
+
+script > 
+"build": "webpack --mode production",
+"build:dev": "webpack --mode development",
+"build:prod": "webpack --mode production"
+
+> npm run build
+> npm run build:prod
+> npm run build:dev
+> npm run build:prod will produce minified main.min.js
+default output will be dist/main.js
+
+
+
+
+-v --version
+-g --global
+-f --force
+-S --save
+-P --save-prod
+-D --save-dev
+-O --save-optional
+-B --save-bundle
+-E --save-exact
+-y --yes
+-n --yes false
+
+Local install (default): puts stuff in ./node_modules of the current package root.
+Global install (with -g): puts stuff in /usr/local or wherever node is installed.
+Install it locally if you're going to require() it.
+Install it globally if you're going to run it on the command line.
+If you need both, then install it in both places, or use npm link.
+
+Packages are dropped into the node_modules folder under the prefix. 
+When installing locally, this means that you can require("packagename") to load its main module, or require("packagename/lib/path/to/sub/module") to load other modules.
+
+Generate gitignore
+------------------
+https://www.npmjs.com/package/make-gitignore
+> npm install -g make-gitignore
+From the root directory of your project, in your terminal
+> gitignore
+It will create a .gitignore file
+
+
+View globally installed packages
+> npm list -g --depth 0
+
+uninstall a global package
+> npm uninstall <package name> -g
+
+u can use un or rm instead of uninstall also
+
+uninstall package
+> npm uninstall <package name>
+remove from package.json also
+> npm uninstall <package name> --save
+
+Get script ready for production
+> npm prune
+this will remove unused packages
+and below will remove dev dependencies
+> npm prune --production
+
+go to package repo
+> npm repo <package name>
+
+update npm itself - use administrtive priviliges always to do this to avoid mess in this perticular case
+> npm i npm@latest -g
+
+npm scripts
+https://docs.npmjs.com/misc/scripts
+
